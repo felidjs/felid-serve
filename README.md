@@ -32,11 +32,18 @@ app.get('/', (req, res) => {
 
 ## Options
 
+- **decorator** *Object*: Customize the decorator names. Default is:
+```js
+{
+  serve: 'serve'
+}
+```
+
 For plugin options, please check [send](https://github.com/pillarjs/send).
 
 Some has default values:
 
-- `root`: default to the directory where node runs.
+- **root**: default to the directory where node runs.
 
 ## License
 

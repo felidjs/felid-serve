@@ -14,8 +14,13 @@ function serve (opt) {
   }
 }
 
+const defaultDecoratorKeys = {
+  serve: 'serve'
+}
+
 function plugin (felid, options) {
-  felid.decorateResponse('serve', serve(options))
+  const decoratorKeys = (options && options.decorator) ? options.decorator : defaultDecoratorKeys
+  felid.decorateResponse(decoratorKeys.serve, serve(options))
 }
 
 module.exports = plugin

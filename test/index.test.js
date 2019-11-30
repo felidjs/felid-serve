@@ -41,3 +41,25 @@ test('Should set correct options', (done) => {
       done()
     })
 })
+
+test('Should set custom decorator property name', (done) => {
+  const instance = new Felid()
+  instance.plugin(serve, {
+    root: path.resolve(__dirname, 'static'),
+    decorator: {
+      serve: 'static'
+    }
+  })
+  instance.get('/test', (req, res) => {
+    res.static('index.html')
+  })
+
+  injectar(instance.lookup())
+    .get('/test')
+    .end((err, res) => {
+      expect(err).toBe(null)
+      expect(res.statusCode).toBe(200)
+      expect(res.payload).toBe(fileContent)
+      done()
+    })
+})
