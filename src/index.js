@@ -19,7 +19,12 @@ const defaultDecoratorKeys = {
 }
 
 function plugin (felid, options) {
-  const decoratorKeys = (options && options.decorator) ? options.decorator : defaultDecoratorKeys
+  const decoratorKeys = (options && options.decorator)
+    ? {
+      ...defaultDecoratorKeys,
+      ...options.decorator
+    }
+    : defaultDecoratorKeys
   felid.decorateResponse(decoratorKeys.serve, serve(options))
 }
 
