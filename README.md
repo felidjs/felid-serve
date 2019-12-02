@@ -39,11 +39,15 @@ app.get('/', (req, res) => {
 }
 ```
 
-For plugin options, please check [send](https://github.com/pillarjs/send).
+For more options, please check [send](https://github.com/pillarjs/send#options).
 
 Some has default values:
 
 - **root**: default to the directory where node runs.
+
+## Api
+
+- **response.serve(path: String, options: Object)**: Serve the given file. The options passed here will override the plugin options.
 
 ## License
 
