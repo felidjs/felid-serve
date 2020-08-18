@@ -25,7 +25,7 @@ function plugin (felid, options) {
       ...options.decorator
     }
     : defaultDecoratorKeys
-  felid.decorateResponse(decoratorKeys.serve, serve(options))
+  felid.decorateResponse(decoratorKeys.serve, () => serve(options))
 }
 
 module.exports = plugin
