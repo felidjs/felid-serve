@@ -1,6 +1,9 @@
 # felid-serve
 
-[![npm version](https://img.shields.io/npm/v/felid-serve.svg)](https://www.npmjs.com/package/felid-serve) [![Build Status](https://travis-ci.com/felidjs/felid-serve.svg?branch=master)](https://travis-ci.com/felidjs/felid-serve) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm version](https://img.shields.io/npm/v/felid-serve.svg)](https://www.npmjs.com/package/felid-serve)
+![Node.js CI](https://github.com/felidjs/felid-serve/workflows/Node.js%20CI/badge.svg)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![codecov](https://codecov.io/gh/felidjs/felid-serve/branch/master/graph/badge.svg)](https://codecov.io/gh/felidjs/felid-serve)
 
 A [Felid](https://github.com/felidjs/felid) plugin for sending static files.
 
